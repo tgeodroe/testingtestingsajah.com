@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = filter_input(INPUT_POST, 'username');
-    $password = password_hash(filter_input(INPUT_POST, 'password'), PASSWORD_DEFAULT);
+    $password = filter_input(INPUT_POST, 'password');
 
     $host = "localhost";
     $dbusername = "root";
